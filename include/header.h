@@ -15,6 +15,8 @@
 #include <fcntl.h>
 #include <string.h>
 
-
+char *str_infile(char *path);
+void write_infile(char *str);
+char *cesar(char *str, int n);
 
 #endif

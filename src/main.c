@@ -7,12 +7,6 @@
 
 #include "../include/header.h"
 
-char *str_infile(char *path);
-
-void write_infile(char *str);
-
-char *cesar(char *str, int n);
-
 char *get_str(char **av)
 {
     char *str;

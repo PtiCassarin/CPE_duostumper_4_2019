@@ -13,8 +13,8 @@ CFLAGS = -I./include
 CFLAGS += -W -Wall -Wextra -g3
 
 SRC =	./src/main.c	\
-	./src/write.c	\
-	./src/cesar.c
+		./src/write.c	\
+		./src/cesar.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -30,6 +30,5 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
-	make fclean -C
 
 re: fclean all

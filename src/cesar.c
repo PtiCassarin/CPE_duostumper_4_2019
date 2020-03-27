@@ -5,9 +5,7 @@
 ** cesar.c
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "../include/header.h"
 
 char new_letter(char old_char, int n)
 {
