@@ -9,6 +9,6 @@
 
 void write_infile(char *str)
 {
-    int fd =  open("./crypt", O_CREAT | O_RDONLY);
+    int fd =  open("./crypt", O_CREAT | O_WRONLY);
     write(fd, str, strlen(str));
 }
