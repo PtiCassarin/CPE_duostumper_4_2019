@@ -10,7 +10,7 @@ CC = gcc
 RM = rm -f
 
 CFLAGS = -I./include
-CFLAGS += -W -Wall -Wextra -g3
+CFLAGS += -W -Wall -Wextra
 
 SRC =	./src/main.c	\
 		./src/write.c	\
@@ -27,6 +27,7 @@ $(NAME): 	$(OBJ)
 
 clean:
 	$(RM) $(OBJ)
+	rm -rf crypt
 
 fclean: clean
 	$(RM) $(NAME)
