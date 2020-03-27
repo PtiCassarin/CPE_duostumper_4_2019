@@ -1,0 +1,33 @@
+##
+## EPITECH PROJECT, 2019
+## Makefile
+## File description:
+## Makefile Compilation
+##
+
+CC = gcc
+
+RM = rm -f
+
+CFLAGS = -I./include
+CFLAGS += -W -Wall -Wextra -g3
+
+SRC =	./src/main.c
+
+OBJ = $(SRC:.c=.o)
+
+NAME = boggle
+
+all: $(NAME)
+
+$(NAME): 	$(OBJ) 
+		 	$(CC) -o $(NAME) $(OBJ)
+
+clean:
+	$(RM) $(OBJ)
+
+fclean: clean
+	$(RM) $(NAME)
+	make fclean -C ./lib/my
+
+re: fclean all
