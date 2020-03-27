@@ -10,7 +10,7 @@
 void write_infile(char *str)
 {
     char *file = "./crypt";
-    mode_t mode = 4444;
+    mode_t mode = 0444;
     int fd =  open(file, O_CREAT | O_WRONLY);
 
     write(fd, str, strlen(str));
