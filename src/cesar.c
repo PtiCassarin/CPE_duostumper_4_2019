@@ -24,5 +24,5 @@ void cesar(char *str, int n)
 
 int main(int ac, char **av)
 {
-    cesar(av[1], av[2][0]);
+    cesar(av[1], atoi(av[2]));
 }
