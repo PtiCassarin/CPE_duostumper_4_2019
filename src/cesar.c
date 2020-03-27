@@ -9,6 +9,11 @@
 
 char new_letterless(char old_char, int n)
 {
+    if (old_char == 'a' && n == -1)
+        return ('z');
+    if (old_char == 'A' && n == -1)
+        return ('Z');
+
     for (int i = n; i < 0; i++) {
         if (old_char == 'a' && i < 0) {
             old_char = 'z';
