@@ -10,6 +10,7 @@
 char *get_str(char **av)
 {
     char *str;
+
     if (strcmp(av[1], "-s") == 0) {
         str = malloc(sizeof(char) * strlen(av[2]));
         str = strcpy(str, av[2]);
@@ -27,6 +28,7 @@ char *str_infile(char *path)
       exit (84);
     read(fd, buff, 10000);
     close (fd);
+
     return (buff);
 }
 
@@ -42,5 +44,6 @@ int main(int ac, char **av)
     str = get_str(av);
     str_crypt = cesar(str, nbr);
     write_infile(str_crypt);
+
     return (0);
 }
