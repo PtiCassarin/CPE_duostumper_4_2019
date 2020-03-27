@@ -16,7 +16,7 @@ SRC =	./src/main.c
 
 OBJ = $(SRC:.c=.o)
 
-NAME = boggle
+NAME = cesar
 
 all: $(NAME)
 
@@ -28,6 +28,6 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
-	make fclean -C ./lib/my
+	make fclean -C
 
 re: fclean all
