@@ -11,6 +11,8 @@ char *str_infile(char *path);
 
 void write_infile(char *str);
 
+char *cesar(char *str, int n);
+
 char *get_str(char **av)
 {
     char *str;
@@ -37,13 +39,14 @@ char *str_infile(char *path)
 int main(int ac, char **av)
 {
     char *str;
+    char *str_crypt;
     int nbr = 0;
  
     if (ac != 4)
         return (84);
     nbr = (atoi(av[3]) < 26 ? atoi(av[3]) : atoi(av[3]) % 26);
     str = get_str(av);
-    printf("%s\n", str);
-    write_infile(str);
+    str_crypt = cesar(str, nbr);
+    write_infile(str_crypt);
     return (0);
 }
