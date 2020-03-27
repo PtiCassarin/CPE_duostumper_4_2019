@@ -31,8 +31,12 @@ char new_letterless(char old_char, int n)
 
 char new_letterplus(char old_char, int n)
 {
+    if (old_char == 'z' && n == 1)
+        return ('a');
+    if (old_char == 'Z' && n == 1)
+        return ('A');
+
     for (int i = n; i > 0; i--) {
-        old_char = old_char + 1;
         if (old_char == 'z' && i > 0) {
             old_char = 'a';
             i--;
@@ -41,6 +45,7 @@ char new_letterplus(char old_char, int n)
             old_char = 'A';
             i--;
         }
+        old_char = old_char + 1;
     }
 
     return (old_char);
