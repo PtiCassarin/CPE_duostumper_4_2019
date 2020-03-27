@@ -17,6 +17,7 @@ char *get_str(char **av)
         return (str);
     } else if (strcmp(av[1], "-f") == 0)
         return (str_infile(av[2]));
+    return ("NULL");
 }
 
 char *str_infile(char *path)
