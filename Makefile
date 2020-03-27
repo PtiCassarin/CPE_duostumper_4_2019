@@ -13,8 +13,8 @@ CFLAGS = -I./include
 CFLAGS += -W -Wall -Wextra
 
 SRC =	./src/main.c	\
-		./src/write.c	\
-		./src/cesar.c
+	./src/write.c	\
+	./src/cesar.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -22,8 +22,8 @@ NAME = cesar
 
 all: $(NAME)
 
-$(NAME): 	$(OBJ) 
-		 	$(CC) -o $(NAME) $(OBJ)
+$(NAME): $(OBJ) 
+	 $(CC) -o $(NAME) $(OBJ)
 
 clean:
 	$(RM) $(OBJ)
