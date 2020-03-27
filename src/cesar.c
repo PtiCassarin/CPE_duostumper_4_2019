@@ -10,15 +10,15 @@
 char new_letterless(char old_char, int n)
 {
     for (int i = n; i < 0; i++) {
-        old_char = old_char - 1;
         if (old_char == 'a' && i < 0) {
             old_char = 'z';
             i++;
         }
         if (old_char == 'A' && i < 0) {
-            old_char = 'z';
+            old_char = 'Z';
             i++;
         }
+        old_char = old_char - 1;
     }
 
     return (old_char);
@@ -33,7 +33,7 @@ char new_letterplus(char old_char, int n)
             i--;
         }
         if (old_char == 'Z' && i > 0) {
-            old_char = 'a';
+            old_char = 'A';
             i--;
         }
     }
@@ -47,9 +47,9 @@ char *cesar(char *s, int n)
     char *new_str = malloc(sizeof(char) * (strlen(s) + 10));
 
     for(int i = 0; s[i] != '\0'; i += 1) {
-        if ((s[i] > 'A' || s[i] > 'a') && (s[i] < 'Z' || s[i] < 'z') && n > 0)
+        if ((s[i] >= 'A' || s[i] >= 'a') && (s[i] <= 'Z' || s[i] <= 'z') && n > 0)
             s[i] = new_letterplus(s[i], n);
-        if ((s[i] > 'A' || s[i] > 'a') && (s[i] < 'Z' || s[i] < 'z') && n < 0)
+        if ((s[i] >= 'A' || s[i] >= 'a') && (s[i] <= 'Z' || s[i] <= 'z') && n < 0)
             s[i] = new_letterless(s[i], n);
         new_str[j] = s[i];
         j++;
