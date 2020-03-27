@@ -12,11 +12,12 @@ RM = rm -f
 CFLAGS = -I./include
 CFLAGS += -W -Wall -Wextra -g3
 
-SRC =	./src/main.c
+SRC =	./src/main.c	\
+		./src/write.c
 
 OBJ = $(SRC:.c=.o)
 
-NAME = boggle
+NAME = cesar
 
 all: $(NAME)
 
@@ -28,6 +29,6 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
-	make fclean -C ./lib/my
+	make fclean -C
 
 re: fclean all
