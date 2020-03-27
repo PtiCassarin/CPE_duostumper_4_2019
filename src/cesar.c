@@ -47,13 +47,10 @@ char *cesar(char *s, int n)
     char *new_str = malloc(sizeof(char) * (strlen(s) + 10));
 
     for(int i = 0; s[i] != '\0'; i += 1) {
-        if ((s[i] > 'A' || s[i] > 'a') && (s[i] < 'Z' || s[i] < 'z') && n > 0) {
+        if ((s[i] > 'A' || s[i] > 'a') && (s[i] < 'Z' || s[i] < 'z') && n > 0)
             s[i] = new_letterplus(s[i], n);
-            printf("Enter\n");
-        }
-        if ((s[i] > 'A' || s[i] > 'a') && (s[i] < 'Z' || s[i] < 'z') && n < 0) {
+        if ((s[i] > 'A' || s[i] > 'a') && (s[i] < 'Z' || s[i] < 'z') && n < 0)
             s[i] = new_letterless(s[i], n);
-        }
         new_str[j] = s[i];
         j++;
     }
