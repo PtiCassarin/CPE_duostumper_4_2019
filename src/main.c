@@ -9,6 +9,8 @@
 
 char *str_infile(char *path);
 
+void write_infile(char *str);
+
 char *get_str(char **av)
 {
     char *str;
@@ -28,7 +30,7 @@ char *str_infile(char *path)
     if (fd == -1)
       exit (84);
     read(fd, buff, 10000);
-
+    close (fd);
     return (buff);
 }
 
@@ -42,5 +44,6 @@ int main(int ac, char **av)
     nbr = (atoi(av[3]) < 26 ? atoi(av[3]) : atoi(av[3]) % 26);
     str = get_str(av);
     printf("%s\n", str);
+    write_infile(str);
     return (0);
 }
