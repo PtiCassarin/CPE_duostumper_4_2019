@@ -7,6 +7,19 @@
 
 #include "../include/header.h"
 
+char *str_infile(char *path);
+
+char *get_str(char **av)
+{
+    char *str;
+    if (strcmp(av[1], "-s") == 0) {
+        str = malloc(sizeof(char) * strlen(av[2]));
+        str = strcpy(str, av[2]);
+        return (str);
+    } else if (strcmp(av[1], "-f") == 0)
+        return (str_infile(av[2]));
+}
+
 char *str_infile(char *path)
 {
     char *buff = malloc(sizeof(char) * 10000);
@@ -22,10 +35,12 @@ char *str_infile(char *path)
 int main(int ac, char **av)
 {
     char *str;
-    int nbr = (atoi(av[2]) < 26 ? atoi(av[2]) : atoi(av[2]) % 26);
+    int nbr = 0;
  
-    if (ac != 3)
+    if (ac != 4)
         return (84);
-    str = str_infile(av[1]);
+    nbr = (atoi(av[3]) < 26 ? atoi(av[3]) : atoi(av[3]) % 26);
+    str = get_str(av);
+    printf("%s\n", str);
     return (0);
 }
