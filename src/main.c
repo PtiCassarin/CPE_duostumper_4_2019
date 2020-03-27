@@ -44,7 +44,7 @@ int main(int ac, char **av)
  
     if (ac != 4)
         return (84);
-    nbr = (atoi(av[3]) < 26 ? atoi(av[3]) : atoi(av[3]) % 26);
+    nbr = atoi(av[3]);
     str = get_str(av);
     str_crypt = cesar(str, nbr);
     write_infile(str_crypt);
