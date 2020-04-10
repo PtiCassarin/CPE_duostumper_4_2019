@@ -10,11 +10,12 @@ CC = gcc
 RM = rm -f
 
 CFLAGS = -I./include
-CFLAGS += -W -Wall -Wextra -g3
+CFLAGS += -g3
 
 SRC =	./src/main.c	\
 		./src/analyse_buff.c	\
-		./src/make.c			
+		./src/make.c			\
+		./src/init.c			
 
 OBJ = $(SRC:.c=.o)
 

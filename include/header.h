@@ -18,9 +18,19 @@
 #define get_word(A, B) get(A, B)
 
 typedef struct instance_s {
-    char **ing;
+    int tomato;
+    int dough;
+    int onion;
+    int pasta;
+    int olive;
+    int pepper;
+    int ham;
+    int cheese;
 } instance_t;
 
 int analyse_buff(instance_t *inst, char *buff_user, int read);
+void make_pasta(instance_t *inst, char *buff_user);
+void make_pizza(instance_t *inst, char *buff_user);
+void init_frigo(instance_t *inst);
 
 #endif

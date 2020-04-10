@@ -49,14 +49,6 @@ char *get_word(char *str, int key)
     return (new_word);
 }
 
-void other_output(char *b)
-{
-    if (strcmp(get(b, 0), "addToFridge") == 0 && invalid_ingr(get(b, 1)) == 0) {
-        printf("'%s': Invalid operation\n", b);
-        return;
-    }
-}
-
 void error_output(char *buff_user)
 {
     if (buff_user[0] == 'm' && buff_user[1] == 'a' && buff_user[2] == 'k' &&
@@ -66,9 +58,8 @@ void error_output(char *buff_user)
             printf("%c", buff_user[i]);
         }
         printf("' unknown\n");
-    } else {
-        other_output(buff_user);
-    }
+    } else
+        printf("'%s': Invalid operation\n", buff_user);
 }
 
 int analyse_buff(instance_t *inst, char *bu, int read)
@@ -84,11 +75,11 @@ int analyse_buff(instance_t *inst, char *bu, int read)
         return (1);
     }
     if (strcmp(get(bu, 0), "disp fridge") == 0) {
-        make_pizza(inst, bu);
+        // display_frigo(inst, bu);
         return (1);
     }
     if (strcmp(get(bu, 0), "addToFridge") == 0 && invalid_ingr(get(bu, 1))) {
-        make_pizza(inst, bu);
+        // make_pizza(inst, bu);
         return (1);
     }
     error_output(bu);

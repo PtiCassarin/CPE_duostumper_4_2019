@@ -35,6 +35,7 @@ int main(int ac, char **av)
     int nbr_read = 0;
     size_t size = 100;
     char *buff_user = NULL;
+    init_frigo(inst);
 
     do {
         buff_user = malloc(sizeof(char) * 1000);
