@@ -7,14 +7,14 @@
 
 #include "../include/header.h"
 
-void frigo(instance_t *inst)
+void display_frigo(instance_t *inst)
 {
-    printf("Tomato = %d\n", inst->tomato);
-    printf("Dough= %d\n", inst->dought);
-    printf("Onion= %d\n", inst->onion);
-    printf("Pasta= %d\n", inst->pasta);
-    printf("Olive= %d\n", inst->olive);
-    printf("Pepper= %d\n", inst->pepper);
-    printf("Ham= %d\n", inst->ham);
-    printf("Cheese= %d\n", inst->cheese);
+    printf("tomato = %d\n", inst->tomato);
+    printf("dough = %d\n", inst->dough);
+    printf("onion = %d\n", inst->onion);
+    printf("pasta = %d\n", inst->pasta);
+    printf("olive = %d\n", inst->olive);
+    printf("pepper = %d\n", inst->pepper);
+    printf("ham = %d\n", inst->ham);
+    printf("cheese = %d\n", inst->cheese);
 }

@@ -74,12 +74,12 @@ int analyse_buff(instance_t *inst, char *bu, int read)
         make_pasta(inst, bu);
         return (1);
     }
-    if (strcmp(get(bu, 0), "disp fridge") == 0) {
-        // display_frigo(inst, bu);
+    if (strcmp(bu, "disp fridge") == 0) {
+        display_frigo(inst);
         return (1);
     }
     if (strcmp(get(bu, 0), "addToFridge") == 0 && invalid_ingr(get(bu, 1))) {
-        // make_pizza(inst, bu);
+        addto(inst, bu);
         return (1);
     }
     error_output(bu);

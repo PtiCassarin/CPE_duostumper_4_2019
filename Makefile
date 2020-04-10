@@ -16,7 +16,9 @@ SRC =	./src/main.c	\
 		./src/analyse_buff.c	\
 		./src/make.c			\
 		./src/init.c			\
-		./src/make_pasta.c		
+		./src/make_pasta.c		\
+		./src/frigo.c			\
+		./src/addto.c 			
 
 OBJ = $(SRC:.c=.o)
 

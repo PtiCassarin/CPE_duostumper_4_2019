@@ -15,7 +15,7 @@
 #include <fcntl.h>
 #include <string.h>
 
-#define get_word(A, B) get(A, B)
+#define get(A, B) get_word(A, B)
 
 typedef struct instance_s {
     int tomato;
@@ -33,5 +33,8 @@ void make_pasta(instance_t *inst, char *buff_user);
 void make_pizza(instance_t *inst, char *buff_user);
 void init_frigo(instance_t *inst);
 char *add_0finale(char *buff_user);
+void display_frigo(instance_t *inst);
+void addto(instance_t *inst, char *str);
+char *get_word(char *str, int key);
 
 #endif
