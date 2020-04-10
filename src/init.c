@@ -22,7 +22,7 @@ void init_value(instance_t *inst)
     inst->onion = 50;
     inst->pasta = 50;
     inst->olive = 50;
-    inst->pepper = 50;
+    inst->pepper = 3;
     inst->ham = 50;
     inst->cheese = 50;
 }
