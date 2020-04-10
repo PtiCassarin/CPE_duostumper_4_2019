@@ -16,7 +16,7 @@ SRC =	./src/main.c
 
 OBJ = $(SRC:.c=.o)
 
-NAME = cesar
+NAME = fridge
 
 all: $(NAME)
 
