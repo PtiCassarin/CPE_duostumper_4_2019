@@ -18,7 +18,9 @@ SRC =	./src/main.c	\
 		./src/init.c			\
 		./src/make_pasta.c		\
 		./src/frigo.c			\
-		./src/addto.c 			
+		./src/addto.c 			\
+		./src/getline.c			\
+		./src/save.c
 
 OBJ = $(SRC:.c=.o)
 

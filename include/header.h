@@ -36,5 +36,8 @@ char *add_0finale(char *buff_user);
 void display_frigo(instance_t *inst);
 void addto(instance_t *inst, char *str);
 char *get_word(char *str, int key);
+int mygetnbr(char *str);
+char *get_next_line(const int fd);
+void save(instance_t *inst);
 
 #endif

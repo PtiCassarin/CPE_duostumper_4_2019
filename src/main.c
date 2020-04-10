@@ -7,6 +7,19 @@
 
 #include "../include/header.h"
 
+int mygetnbr(char *str)
+{
+    char *new_str = malloc(sizeof(char) * (100));
+    int j = 0;
+
+    for (int i = 0; str[i]; i++) {
+        if (str[i] >= '0' && str[i] <= '9')
+            new_str[j++] = str[i];
+    }
+    new_str[j] = '\0';
+    return (atoi(new_str));
+}
+
 char *add_0finale(char *buff_user)
 {
     int i = 0;
@@ -40,5 +53,6 @@ int main(int ac, char **av)
         buff_user = malloc(sizeof(char) * 1000);
     }while (((nbr_read = getline(&buff_user, &size, stdin)) > -1) &&
     get_enteruser(inst, buff_user, nbr_read) == 1);
+    save(inst);
     return (0);
 }
