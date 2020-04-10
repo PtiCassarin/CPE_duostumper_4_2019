@@ -15,11 +15,10 @@
 #include <fcntl.h>
 #include <string.h>
 
+int analyse_buff(instance_t *inst, char* buff_user, int read);
 
 typedef struct instance_s {
     char **ing;
 } instance_t;
-
-int analyse_buff(instance_t *inst, char *buff_user, int read);
 
 #endif

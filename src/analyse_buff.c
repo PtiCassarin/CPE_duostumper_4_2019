@@ -7,3 +7,7 @@
 
 #include "../include/header.h"
 
+int analyse_buff(instance_t *inst, char *buff_user, int read)
+{
+    return (1);
+}
