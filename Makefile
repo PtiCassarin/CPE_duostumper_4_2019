@@ -12,7 +12,8 @@ RM = rm -f
 CFLAGS = -I./include
 CFLAGS += -W -Wall -Wextra
 
-SRC =	./src/main.c
+SRC =	./src/main.c	\
+		./src/analyse_buff.c	
 
 OBJ = $(SRC:.c=.o)
 
