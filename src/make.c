@@ -45,8 +45,3 @@ void make_pizza(instance_t *inst, char *buff_user)
     }
     make_pizzaagain(inst, buff_user);
 }
-
-void make_pasta(instance_t *inst, char *buff_user)
-{
-    
-}

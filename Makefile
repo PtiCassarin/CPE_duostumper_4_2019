@@ -15,7 +15,8 @@ CFLAGS += -g3
 SRC =	./src/main.c	\
 		./src/analyse_buff.c	\
 		./src/make.c			\
-		./src/init.c			
+		./src/init.c			\
+		./src/make_pasta.c		
 
 OBJ = $(SRC:.c=.o)
 
