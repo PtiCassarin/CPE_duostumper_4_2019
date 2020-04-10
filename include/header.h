@@ -32,5 +32,6 @@ int analyse_buff(instance_t *inst, char *buff_user, int read);
 void make_pasta(instance_t *inst, char *buff_user);
 void make_pizza(instance_t *inst, char *buff_user);
 void init_frigo(instance_t *inst);
+char *add_0finale(char *buff_user);
 
 #endif

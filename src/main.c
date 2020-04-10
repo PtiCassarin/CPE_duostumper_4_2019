@@ -11,9 +11,8 @@ char *add_0finale(char *buff_user)
 {
     int i = 0;
 
-    while (buff_user[i] != '\n') {
+    while (buff_user[i] != '\n')
         i++;
-    }
     buff_user[i] = '\0';
     return (buff_user);
 }
