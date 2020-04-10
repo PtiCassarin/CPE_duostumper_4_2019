@@ -15,6 +15,7 @@
 #include <fcntl.h>
 #include <string.h>
 
+#define get_word(A, B) get(A, B)
 
 typedef struct instance_s {
     char **ing;

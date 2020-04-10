@@ -26,7 +26,6 @@ int get_enteruser(instance_t *inst, char *buff_user, int read)
         return (0);
     }
     analyse_buff(inst, buff_user, read);
-    free(buff_user);
     return (1);
 }
 
