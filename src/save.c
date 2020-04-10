@@ -7,7 +7,6 @@
 
 #include "../include/header.h"
 
-
 int number_digits(int nbr)
 {
     int n = 1;

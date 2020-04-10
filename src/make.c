@@ -16,7 +16,6 @@ void make_pizzaagain(instance_t *inst, char *buff_user)
     inst->ham -= 4;
     inst->cheese -= 3;
     inst->pepper -= 8;
-    printf("REMOVE\n");
 }
 
 int make_pizzainter(instance_t *inst, char *buff_user)

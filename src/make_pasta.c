@@ -14,7 +14,6 @@ void make_pasta(instance_t *inst, char *buff_user)
     inst->olive -= 6;
     inst->cheese -= 3;
     inst->ham -= 4;
-    printf("REMOVE\n");   
 }
 
 void check_frigo(instance_t *inst, char *buff_user)
@@ -32,11 +31,12 @@ void check_frigo(instance_t *inst, char *buff_user)
         return;
     }
     if (inst->cheese < 3) {
-	printf("'make pasta': not enough cheese");
-	return;
+        printf("'make pasta': not enough cheese");
+        return;
     }
     if (inst->ham < 4) {
-	printf("'make pasta': not enough ham");
-	return;
+        printf("'make pasta': not enough ham");
+        return;
+    }
     make_pasta(inst, buff_user);
 }
