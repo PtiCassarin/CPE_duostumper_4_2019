@@ -12,9 +12,7 @@ RM = rm -f
 CFLAGS = -I./include
 CFLAGS += -W -Wall -Wextra
 
-SRC =	./src/main.c	\
-	./src/write.c	\
-	./src/cesar.c
+SRC =	./src/main.c
 
 OBJ = $(SRC:.c=.o)
 
